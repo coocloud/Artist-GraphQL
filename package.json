@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "facts and info regarding artists",
   "main": "index.js",
+  "start": "node index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/coocloud/Artist-GraphQL"
