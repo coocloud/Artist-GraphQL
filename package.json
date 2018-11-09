@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "facts and info regarding artists",
   "main": "index.js",
-  "start": "node index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/coocloud/Artist-GraphQL"
   },
   "scripts": {
-    "dev": "nodemon index.js --ignore client"
+    "dev": "nodemon index.js --ignore client",
+    "start": "node index.js"
   },
   "author": "coocloud",
   "license": "ISC",
