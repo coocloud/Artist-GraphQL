@@ -1,2 +1,2 @@
-require('./song');
-require('./lyric');
+require('./artist');
+require('./info');
