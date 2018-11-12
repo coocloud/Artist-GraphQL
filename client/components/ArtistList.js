@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router';
 import query from '../queries/fetchArtists';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class ArtistList extends Component {
 
@@ -23,7 +24,7 @@ class ArtistList extends Component {
                         {title}
                     </Link>
                     <i
-                        className="material-icons"
+                        className="material-icons delete-artist-button"
                         onClick={() => this.onArtistDelete(id)}
                     >
                         delete
@@ -34,13 +35,16 @@ class ArtistList extends Component {
     }
 
     render() {
+
         if (this.props.data.loading) { return <div>Loading...</div>; }
 
         return (
             <div>
                 <h3>List of Artists</h3>
                 <ul className="collection">
-                    {this.renderArtists()}
+                    <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500} transitionEnterTimeout={500} transitionEnter={true} transitionLeaveTimeout={500} transitionLeave={true}>
+                        {this.renderArtists()}
+                    </ReactCSSTransitionGroup>
                 </ul>
                 <Link
                     to="/artists/new"

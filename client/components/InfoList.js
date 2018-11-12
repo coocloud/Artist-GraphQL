@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 class InfoList extends Component {
@@ -45,7 +46,11 @@ class InfoList extends Component {
         return (
             <div>
                 <h5>Info List</h5>
-                <ul className="collection">{this.renderFacts()}</ul>
+                <ul className="collection">
+                    <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500} transitionEnterTimeout={500} transitionEnter={true} transitionLeaveTimeout={500} transitionLeave={true}>
+                        {this.renderFacts()}
+                    </ReactCSSTransitionGroup>
+                </ul>
             </div>
         )
     }
