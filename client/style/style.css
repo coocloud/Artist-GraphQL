@@ -54,3 +54,9 @@
 .vote-box:hover {
     transform: scale(1.5);
 }
+
+.coocloud-logo {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
